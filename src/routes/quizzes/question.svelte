@@ -16,7 +16,7 @@
 	}
 </script>
 
-<fieldset class="border m-4 p-4">
+<fieldset class="border mb-4 p-4">
 	<h2 class="text-xl text-blue-800 mb-3">{question}</h2>
 	<div class="grid grid-cols-2 gap-3" on:click={selectAnswer}>
 		{#each options as option (option.id)}

@@ -13,5 +13,5 @@
 	{#each questionData as data (data.questionID)}
 		<Question {data} />
 	{/each}
-	<button>Submit Quiz</button>
+	<button class="border py-2 px-4">Submit Quiz</button>
 </form>
