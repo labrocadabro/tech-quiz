@@ -5,19 +5,19 @@ export const questionData: Question[] = [
 		options: [
 			{
 				name: 'Hello',
-				value: '1_hello'
+				id: '1_hello'
 			},
 			{
 				name: 'World',
-				value: '1_world'
+				id: '1_world'
 			},
 			{
 				name: 'Bye',
-				value: '1_bye'
+				id: '1_bye'
 			},
 			{
 				name: 'No',
-				value: '1_no'
+				id: '1_no'
 			}
 		],
 		answer: '1_hello'
@@ -28,19 +28,19 @@ export const questionData: Question[] = [
 		options: [
 			{
 				name: 'Hello',
-				value: '2_hello'
+				id: '2_hello'
 			},
 			{
 				name: 'World',
-				value: '2_world'
+				id: '2_world'
 			},
 			{
 				name: 'Ciao',
-				value: '2_ciao'
+				id: '2_ciao'
 			},
 			{
 				name: 'No',
-				value: '2_no'
+				id: '2_no'
 			}
 		],
 		answer: '2_ciao'
@@ -56,5 +56,5 @@ export interface Question {
 
 interface Option {
 	name: string;
-	value: string;
+	id: string;
 }

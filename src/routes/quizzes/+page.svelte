@@ -9,6 +9,9 @@
 </svelte:head>
 
 <h1>{title}</h1>
-{#each questionData as data (data.questionID)}
-	<Question {data} />
-{/each}
+<form method="POST">
+	{#each questionData as data (data.questionID)}
+		<Question {data} />
+	{/each}
+	<button>Submit Quiz</button>
+</form>
