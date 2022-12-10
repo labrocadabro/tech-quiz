@@ -6,21 +6,16 @@
 	const { questionID, question, options, answer } = data;
 	let questionGroup: string;
 
-	function selectAnswer(e: MouseEvent) {
-		const option = e.target as HTMLDivElement;
-		const options = document.querySelectorAll(
-			`[name='${questionID}']`
-		) as NodeListOf<HTMLInputElement>;
-		options.forEach((op) => (op.checked = false));
-		option.querySelector('input')!.checked = true;
+	function selectAnswer(this: HTMLDivElement) {
+		this.querySelector('input')!.checked = true;
 	}
 </script>
 
 <fieldset class="border mb-4 p-4">
 	<h2 class="text-xl text-blue-800 mb-3">{question}</h2>
-	<div class="grid grid-cols-2 gap-3" on:click={selectAnswer}>
+	<div class="grid grid-cols-2 gap-3">
 		{#each options as option (option.id)}
-			<div class="border p-4">
+			<div class="border p-4" on:click={selectAnswer}>
 				<input
 					type="radio"
 					bind:group={questionGroup}
